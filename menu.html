@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Platform Assignment</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script type="text/javascript" src="platform.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="platform.css">
+</head>
+<body id="menu">
+	<canvas id="myCanvas"></canvas>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-6">
+			<ul class="dash">
+				<li onclick="document.getElementById('abstract').style.display='block'">ABSTRACT</li>
+				<li onclick="document.getElementById('algorithm').style.display='block'">ALGORITHM</li>
+				<li onclick="document.getElementById('tools').style.display='block'">TOOLS USED</li>
+				<li onclick="document.getElementById('use').style.display='block'">USE CASE</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="abstract" class="modal">
+	    <div class="modal-content animate">
+	      <p>abstract</p>
+	     </div>
+	</div>
+
+	<div id="algorithm" class="modal">
+		<div class="modal-content animate">
+			<p>algorithm</p>		    
+		</div>
+	</div>
+
+	<div id="tools" class="modal">
+		<div class="modal-content animate">
+			<p>tools used</p>		    
+		</div>
+	</div>
+
+	<div id="use" class="modal">
+		<div class="modal-content animate">
+			<p>use case</p>		    
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		window.onclick = function(event) {
+		    if (event.target == (modal = document.getElementById('abstract'))) {
+		        modal.style.display = "none";
+		    }
+		    else if (event.target == (modal = document.getElementById('algorithm'))){
+		    	modal.style.display = "none";
+		    }
+		    else if (event.target == (modal = document.getElementById('use'))){
+				modal.style.display = "none";
+		    }
+		    else if (event.target == (modal = document.getElementById('tools'))){
+		    	modal.style.display = "none";
+		    }
+		} 
+	</script>
+</body>
+</html>
